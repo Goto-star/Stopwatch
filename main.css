@@ -1,0 +1,22 @@
+h3 {
+    margin: 30px 5px;
+    padding: 0;
+    font-size: 30px;
+}
+
+#mytime {
+    margin: 0 0 30px 30px;
+    padding: 0;
+    font-size: 50px;
+    letter-spacing: 5px;
+}
+
+input {
+    padding: 20px 40px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+input:hover {
+    filter: brightness(90%);
+}
