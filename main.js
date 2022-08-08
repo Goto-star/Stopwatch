@@ -2,9 +2,9 @@ const startBtn = document.querySelector("#btn_start");
 const stopBtn = document.querySelector("#btn_stop");
 const resetBtn = document.querySelector("#btn_reset");
 
-var sec3  = 0;
-var sec2  = 0;
-var sec1  = 0;
+var hour  = 0;
+var min  = 0;
+var sec  = 0;
 var mSec = 0;
 
 let time;
@@ -14,19 +14,19 @@ function startTimer() {
 time = setInterval(function() {
 mSec ++;
 if (mSec == 10) {
- sec1++;
+ sec++;
  mSec = 0;
 }
-if (sec1 == 10) {
- sec2++;
- sec1 = 0;
+if (sec == 60) {
+ min++;
+ sec = 0;
 }
-if (sec2 == 10) {
- sec3++;
- sec2 = 0;
+if (min == 60) {
+ hour++;
+ min = 0;
 }
 
-document.getElementById('mytime').innerHTML = sec3 + ":" + sec2 + ":" + sec1 + ":" + mSec;
+document.getElementById('mytime').innerHTML = hour + ":" + min + ":" + sec + ":" + mSec;
 },100);
 
 startBtn.setAttribute("disabled", true);
