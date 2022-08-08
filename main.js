@@ -7,7 +7,7 @@ var min  = 0;
 var sec  = 0;
 var mSec = 0;
 
-let time;
+var time;
 
 //スタートボタン
 function startTimer() {
@@ -46,6 +46,7 @@ startBtn.removeAttribute("disabled", false);
 
 //リセットボタン
 function resetTimer(){
+ clearInterval(time);
 document.getElementById('mytime').innerHTML = '0:0:0:0';
 
 time = 0;
