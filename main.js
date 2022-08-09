@@ -46,10 +46,13 @@ startBtn.removeAttribute("disabled", false);
 
 //リセットボタン
 function resetTimer(){
- clearInterval(time);
+clearInterval(time);
 document.getElementById('mytime').innerHTML = '0:0:0:0';
 
-time = 0;
+hour = 0;
+min = 0;
+sec = 0;
+mSec = 0;
 
 startBtn.removeAttribute("disabled", false);
 stopBtn.setAttribute("disabled", true);
